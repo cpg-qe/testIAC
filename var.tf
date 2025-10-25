@@ -143,3 +143,18 @@ variable "objectVar" {
  })
  description = "Tags for the EC2 instance"
 }
+
+variable "objectVar1" {
+ default = {
+   name = "My Vm disk"
+   //commment .......,
+   env  = "Dev",
+   isAvailable = true
+ }
+ type = object({
+   name = string
+   env  = string,
+   isAvailable = bool
+ })
+ description = "Tags for the EC2 instance"
+}
